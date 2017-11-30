@@ -1,4 +1,4 @@
-# jQuery File Upload Plugin
+# Fork of jQuery File Upload Plugin
 
 ## Demo
 [Demo File Upload](https://blueimp.github.io/jQuery-File-Upload/)
@@ -6,6 +6,8 @@
 ## Description
 File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview images, audio and video for jQuery.  
 Supports cross-domain, chunked and resumable file uploads and client-side image resizing. Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.
+
+This fork is altered to set up immediately for database integration. https://github.com/blueimp/jQuery-File-Upload/wiki/PHP-MySQL-database-integration with additional parameters for getting a user's session id (change as you see fit.) UploadHandler.php has been altered in a similar fashion to show how to create user directories and apply the session user_id to the directory name.
 
 ## Setup
 * [How to setup the plugin on your website](https://github.com/blueimp/jQuery-File-Upload/wiki/Setup)
