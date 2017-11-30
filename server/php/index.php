@@ -10,6 +10,10 @@
  * https://opensource.org/licenses/MIT
  */
 
+/* include_once("path_to_config_where_session_is_set.php"); */
+
+$user_id_session = $_SESSION['user_id'];
+
 $options = array(
     			'delete_type' => '',
     			'db_host' => '',
