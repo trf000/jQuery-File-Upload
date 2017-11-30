@@ -47,7 +47,7 @@ class UploadHandler
             'upload_dir' => dirname($this->get_server_var('SCRIPT_FILENAME')).'/files/',
             'upload_url' => $this->get_full_url().'/files/',
             'input_stream' => 'php://input',
-            'user_dirs' => false,
+            'user_dirs' => true,
             'mkdir_mode' => 0755,
             'param_name' => 'files',
             // Set the following option to 'POST', if your server does not support
@@ -83,7 +83,7 @@ class UploadHandler
             //     3. Set to 3 to send a X-Accel-Redirect header for nginx
             // If set to 2 or 3, adjust the upload_url option to the base path of
             // the redirect parameter, e.g. '/files/'.
-            'download_via_php' => false,
+            'download_via_php' => true,
             // Read files in chunks to avoid memory limits when download_via_php
             // is enabled, set to 0 to disable chunked reading of files:
             'readfile_chunk_size' => 10 * 1024 * 1024, // 10 MiB
@@ -215,8 +215,9 @@ class UploadHandler
     }
 
     protected function get_user_id() {
-        @session_start();
-        return session_id();
+/*         @session_start();
+        return session_id(); */
+    	return $_SESSION['user_id'];
     }
 
     protected function get_user_path() {
