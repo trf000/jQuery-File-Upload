@@ -11,12 +11,12 @@
  */
 
 $options = array(
-    			'delete_type' => 'POST',
-    			'db_host' => 'acwebdbqa',
-    			'db_user' => 'dba',
-    			'db_pass' => 'BravesAreBetter',
-    			'db_name' => 'health_app',
-    			'db_table' => 'transcripts'
+    			'delete_type' => '',
+    			'db_host' => '',
+    			'db_user' => '',
+    			'db_pass' => '',
+    			'db_name' => '',
+    			'db_table' => ''
     	);
     	
     	error_reporting(E_ALL | E_STRICT);
